@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="Fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+  <title>Bloc | Cabinet d'expertise comptable</title>
+</head>
+
+<body>
+
+  <style>
+    body {
+      font-family: "Roboto Slab", serif;
+      font-size: 1rem;
+      font-weight: 400;
+      font-style: normal;
+      line-height: 1.6em;
+      text-decoration: none;
+      text-transform: none;
+      letter-spacing: -0.45px;
+
+    }
+
+    body {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .dispotion {
+      position: absolute;
+      display: flex;
+      justify-items: center;
+      align-items: center;
+      justify-content: space-evenly;
+      width: 200px;
+
+      right: 0
+    }
+
+    .dispotion .reseau_social {
+      background-color: #363e3f;
+
+    }
+
+    .dispotion .reseau_social svg {
+      color: white;
+    }
+
+    .dispotion .reseau_social:hover {
+      background-color: white;
+    }
+
+    .dispotion .reseau_social:hover svg {
+      color: #363e3f;
+    }
+
+    .dispotion {
+      right: 0;
+      margin-top: 3%;
+      float: right;
+
+      right: 79%;
+    }
+
+    .dropdown:hover>.dropdown-menu {
+      display: block;
+
+    }
+
+    .fixed-btn a i {
+      font-size: 3rem;
+
+
+    }
+
+    #scrollUp a i {
+      font-size: 3rem;
+
+    }
+
+    #scrollUp {
+      display: block;
+      opacity: 0;
+
+    }
+
+    .btf1 {
+      margin-left: 93%;
+      top: 70%;
+
+    }
+
+    .btf2 {
+      margin-left: 93%;
+      top: 78%;
+    }
+
+    .btf3 {
+      margin-left: 93%;
+      top: 86%;
+    }
+
+
+
+    @media screen and (max-width: 962px) {
+      .dispotion {
+        margin-top: 27%;
+        right: 38%;
+
+      }
+    }
+
+    @media screen and (max-width: 767px) {
+
+      #menu-footer-menu-1 {
+
+
+        list-style: none;
+      }
+
+      .reseau {
+        opacity: 0;
+      }
+
+      .cop {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+
+
+
+      }
+
+      .baisse {
+        position: relative;
+        padding-top: 1%;
+        margin-top: 2%;
+
+
+      }
+
+      .btf1 {
+        margin-left: 85%;
+
+
+      }
+
+      .btf2 {
+        margin-left: 85%;
+
+        top: 76%
+      }
+
+      .btf3 {
+
+        margin-left: 85%;
+        top: 82%;
+
+
+      }
+
+      .dispotion {
+
+
+        right: 29%;
+        margin-top: -1%;
+      }
+
+
+    }
+
+
+    /*a{text-decoration: none;
+    font: 1rem "Poppins", sans-serif;
+    text-decoration: none;
+    color: #4f6fce;
+    font-size: 14px;
+    }/*
+body{
+    font-family: Open Sans,sans-serif;
+   
+    background: #fff;
+}
+body{
+    margin: 0;
+    font-family: var(--bs-font-sans-serif);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+}*/
+
+    #sttbl {
+      color: #50a2cb;
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    .step-wizard {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    nav {
+      display: block;
+    }
+
+    .btn,
+    .form-control-color:not(:disabled):not([readonly]),
+    .form-control[type=file]:not(:disabled):not([readonly]),
+    [role=button],
+    [type=button]:not(:disabled),
+    [type=reset]:not(:disabled),
+    [type=submit]:not(:disabled),
+    button:not(:disabled),
+    summary {
+      cursor: pointer;
+    }
+
+    [type=button],
+    [type=reset],
+    [type=submit],
+    button {
+      -webkit-appearance: button;
+    }
+
+    .step-wizard-list {
+      background: #fff;
+      box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+      color: #333;
+      list-style-type: none;
+      border-radius: 10px;
+      display: flex;
+      padding: 20px 30px 20px 0px !important;
+      position: relative;
+      z-index: 1;
+    }
+
+    .step-wizard-item {
+      padding: 0 20px;
+      flex-basis: 0;
+      -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+      flex-grow: 1;
+      width: 20px;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      position: relative;
+    }
+
+    .progress-count {
+      height: 40px;
+      width: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      font-weight: 600;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+      color: transparent;
+    }
+
+    .step-wizard-list a {
+      text-decoration: none;
+    }
+
+    .current-item .progress-count:after {
+      background: #fff;
+      border: 3px solid #9BBE3D;
+
+    }
+
+    .progress-count:after {
+      content: "";
+      height: 30px;
+      width: 30px;
+      background: #21d4fd;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      z-index: -1;
+    }
+
+    .current-item .progress-count {
+      color: #001B5B;
+      font-size: 22px;
+    }
+
+    .progress-count {
+      height: 40px;
+      width: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      font-weight: 600;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+      color: transparent;
+    }
+
+    .step-wizard-item+.step-wizard-item:after {
+      content: "";
+      position: absolute;
+      left: 10px;
+      top: 19px;
+      background: #001B5B;
+      width: 100%;
+      height: 3px;
+      transform: translateX(-50%);
+      z-index: -1;
+    }
+
+    .ps {
+      display: block;
+      margin-block-start: 1em;
+      margin-block-end: 1em;
+      margin-inline-start: 0px;
+      margin-inline-end: 0px;
+    }
+
+    /**ffffffffffffffffffffffffffffffffff*/
+    .reseau {
+      position: absolute;
+      display: flex;
+      justify-items: center;
+      align-items: center;
+      justify-content: space-evenly;
+      width: 200px;
+
+      right: 0
+    }
+
+    .reseau_social {
+
+
+      width: 40px;
+      height: 40px;
+      display: flex;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      background-color: white;
+      border-radius: 50%;
+    }
+
+    .reseau_social a {
+      display: block;
+
+      color: #164294 !important
+    }
+
+    .cop a {
+      text-decoration: none;
+      color: #a6a6a6;
+
+
+    }
+
+
+
+    .reseau_social:hover {
+
+
+
+      background-color: #16437E;
+
+
+
+    }
+
+    .reseau_social:hover a svg {
+      color: white;
+
+    }
+
+    .nav-item:hover {
+      background-color: #cd242d;
+
+
+    }
+
+    .vv {
+      position: relative;
+      left: 18%;
+    }
+
+
+    .nav-item:hover a {
+
+      font-weight: bold;
+
+    }
+  </style>
+
+
+  <header>
+    <div id="service"></div>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top " style="background-color: whitesmoke;">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="../img/logo-1.webp" alt=""></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse " id="navbarNavDropdown">
+          <ul class="navbar-nav vv">
+            <li class="nav-item ">
+              <a id="sacceuil" class="nav-link  linkacceuil accui" href="../index.html">ACCUEIL</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link accui ajjbt chjj dropdown-toggle propo" href="#" id="navbarDropdownMenuLink"
+                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                A PROPOS
+              </a>
+              <ul class="dropdown-menu animate slideds change chn pro" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="../cabinet-expertise-comptable-casablanca.html">CABINET D'EXPERTISE
+                    COMPTABLE</a></li>
+                <li><a class="dropdown-item" href="../nos-valeur-engagement.html">NOS VALEUR ET ENGAGEMENT</a></li>
+                <li><a class="dropdown-item" href="../pour-quoi-nous-choisir.html">POUR QUOI NOUS CHOISIR</a></li>
+              </ul>
+            </li>
+
+
+            <li class="nav-item dropdown ">
+              <a class="nav-link accui ajjb dropdown-toggle servic" href="#" id="navbarDropdownMenuLink" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                SERVICES
+              </a>
+              <ul class="dropdown-menu animate slideds change serv" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="../Service/conseil-strategie-casablanca.html">CONSEIL ET
+                    STRATEGIE</a></li>
+                <li><a class="dropdown-item" href="../Service/conseil-fiscal-casablanca.html">CONSEIL
+                    FISCAL</a></li>
+                <li><a class="dropdown-item" href="../Service/creation-entreprise-casablanca.html">CREATION
+                    D'ENTRERISE</a></li>
+                <li><a class="dropdown-item" href="../Service/domiciliation-entreprise-casablanca.html">DOMICILIATION
+                    ENTREPRISE</a></li>
+                <li><a class="dropdown-item" href="../Service/conseil--comptabilite-fiscal-casablanca.html">FISCALITE ET
+                    COMPTABILITE</a>
+                </li>
+                <li><a class="dropdown-item"
+                    href="../Service/formation-comptabilite-fiscalite-casablanca.html">FORMATION COMPTABILITE
+                    FISCALITE</a></li>
+                <li><a class="dropdown-item" href="../Service/Juridique-entreprises-casablanca.html">JURIDIQUE DES
+                    ENTREPRISES</a></li>
+                <li><a class="dropdown-item" href="../Service/gestion-de-paie-casablanca.html">LA GESTION DE LA PAIE</a>
+                </li>
+                <li><a class="dropdown-item" href="../Service/Servic9.html">SERVICE9</a></li>
+                <li><a class="dropdown-item" href="../Service/ervice10.html">SERVICE10</a></li>
+                <li><a class="dropdown-item" href="../Service/vice11.html">SERVICE11</a></li>
+
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link accui" href="bloc_page1.html">BLOC</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link accui" href="../Contactez-nous/contact.html">CONTACT-NOUS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link accui" href="../Contactez-nous/devis.html">DEVIS</a>
+            </li>
+
+            <!--<li class="nav-item " style="padding-left:15%;">
+            <div class="reseau_social">
+            <a href="https://www.facebook.com"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+              </svg>
+            </a>
+          </div>
+
+          </li>
+         
+          <li class="nav-item " style="padding-left: 3%;">
+            <div class="reseau_social">
+            <a href="https://www.twitter.com"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+              </svg></a>
+            </div>
+
+          </li>
+          <li class="nav-item" style="padding-left: 3%;">
+            <div class="reseau_social">
+            <a href="https://www.linkedin.com"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+              </svg></a>
+            </div>
+          </li>
+          <li class="nav-item" style="padding-left: 3%;">
+            <div class="reseau_social">
+            <a href="https://www.linkedin.com"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+              </svg></a>
+            </div>
+          </li>-->
+          </ul>
+          <div class="reseau">
+            <div class="reseau_social">
+              <a href="https://www.twitter.com"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="16"
+                  fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                  <path
+                    d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
+                </svg></a>
+            </div>
+            <div class="reseau_social">
+              <a href="https://www.facebook.com"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                  fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                  <path
+                    d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                </svg>
+              </a>
+            </div>
+            <div class="reseau_social">
+              <a href="https://www.Instagram.com"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                  fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                  <path
+                    d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+                </svg>
+              </a>
+            </div>
+            <div class="reseau_social">
+              <a href="https://www.linkedin.com"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                  fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                  <path
+                    d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+                </svg></a>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </nav>
+
+  </header>
+  <div class="container" style="padding:0 10% ;margin-top:10%">
+    <div class="row row-cols-sm-6">
+      <div class="col-lg-4 col-md-4  col-xs-12">
+
+        <div class="card" style="padding-left:3%;padding-right:3%; padding-top: 2%;padding-bottom: 2%;">
+          <a href="pouvoirs-insoupçonnes-de-votre-expert-comptable.html">
+            <img src="../img/comment-fonctionne-quickbooks.webp" class="card-img-top" style="height:200px">
+          </a>
+
+          <div class="texte card-body">
+            <!--<a class="openServiceLinkcatg" href="" style="font: 1em sans-serif;;  color: rgb(79, 111, 206); text-decoration: none;font-weight: bold;"> Nettoyage de Bureaux</a>
+                -->
+            <h4>
+              <a href="pouvoirs-insoupçonnes-de-votre-expert-comptable.html"><u id="sttbl" style="    color: #50a2cb;
+                            font-size: 20px;
+                            font-weight: bold;">3 pouvoirs insoupçonnés de votre expert comptable</u></a>
+            </h4>
+            <p>
+            <p>in CPA | 08/23/2016</br>
+              Our Score On imagine à tort que le rôle de l’expert comptable se cantonne à la tenue et la révision de la
+              comptabilité et de la fiscalité des entités. Il n’en est rien, car de nombreux dirigeants font appel à
+              l’expert comptable, qui est un véritable généraliste de l’entreprise, afin d’effectuer des missions
+              accessoires. Ils peuvent ainsi bénéficier de ses connaissances en matière comptable, fiscale,...</p>
+            <span style="display: flex;
+                    -webkit-box-pack: end;
+                    justify-content: flex-end;
+                    position: absolute;
+                    bottom: 10px;
+                    right: 10px;">
+
+              <a class="openServiceLinkcatg" href="pouvoirs-insoupçonnes-de-votre-expert-comptable.html"
+                style="font: 1em sans-serif;;  color: rgb(79, 111, 206);  text-decoration: none;font-weight: bold; ">Lire
+                la suite</a>
+            </span>
+
+          </div>
+
+
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-4  col-xs-12">
+        <div class="card" style="padding-left:3%;padding-right:3%; padding-top: 2%;padding-bottom: 2%;">
+
+
+
+          <a href="un-cpa-auditeur-quest-ce-que-cest.html">
+            <img src="../img/fiducie-familiale.webp" class="card-img-top" style="height:200px">
+          </a>
+
+          <div class="texte card-body">
+            <!--<a class="openServiceLinkcatg" href="" style="font: 1em sans-serif;;  color: rgb(79, 111, 206); text-decoration: none;font-weight: bold;"> Nettoyage de Bureaux</a>
+                -->
+            <h4>
+              <a href="un-cpa-auditeur-quest-ce-que-cest.html"><u id="sttbl" style="    color: #50a2cb;
+                            font-size: 20px;
+                            font-weight: bold;">Un CPA auditeur : qu’est-ce que c’est?</u></a>
+            </h4>
+            <p>
+            <p>in CPA | 08/23/2016</br>
+              Our Score Depuis l’entrée en vigueur de la loi portant sur les comptables professionnels agréés, seul le
+              titre unifié de CPA peut être utilisé. Celui de CPA auditeur désigne quant à lui les CPA détenant un
+              permis de comptabilité publique et autorisés à émettre un rapport d’audit ou de mission d’examen. Le CPA
+              auditeur détient un permis de comptabilité publique Le Règlement sur le permis...</p>
+            <span style="    display: flex;
+                    -webkit-box-pack: end;
+                    justify-content: flex-end;
+                    position: absolute;
+                    bottom: 10px;
+                    right: 10px;">
+
+              <a class="openServiceLinkcatg" href="un-cpa-auditeur-quest-ce-que-cest.html"
+                style="font: 1em sans-serif;;  color: rgb(79, 111, 206); text-decoration: none;font-weight: bold;">Lire
+                la suite</a>
+            </span>
+
+          </div>
+        </div>
+
+      </div>
+      <div class="col-lg-4 col-md-4  col-xs-12">
+
+        <div class="card" style="padding-left:3%;padding-right:3%; padding-top: 2%;padding-bottom: 2%;">
+          <a href="bienfaits-conseiller-fiscal-sur-votre-entreprise.html">
+            <img src="../img/bloc_3.webp" class="card-img-top" style="height:200px">
+          </a>
+
+          <div class="texte card-body">
+            <!--<a class="openServiceLinkcatg" href="" style="font: 1em sans-serif;;  color: rgb(79, 111, 206); text-decoration: none;font-weight: bold;"> Nettoyage de Bureaux</a>
+                -->
+            <h4>
+              <a href="bienfaits-conseiller-fiscal-sur-votre-entreprise.html"><u id="sttbl" style="    color: #50a2cb;
+                            font-size: 20px;
+                            font-weight: bold;">3 bienfaits d’un conseiller fiscal sur votre entreprise</u></a>
+            </h4>
+            <p>
+            <p>in Conseils et astuces | 07/29/2016</br>
+              Our Score Les questions fiscales requièrent des connaissances pointues et constamment actualisées. Car à
+              moins d’être un spécialiste, il est très facile de se perdre dans les méandres de la fiscalité des
+              entreprises, de s’exposer à de graves risques ou encore de payer trop d’impôts du fait d’un manque
+              d’expertise. La meilleure solution reste de faire un appel à un conseiller fiscal afin d’optimiser la...
+            </p>
+            <span style="    display: flex;
+                    -webkit-box-pack: end;
+                    justify-content: flex-end;
+                    position: absolute;
+                    bottom: 10px;
+                    right: 10px;">
+
+              <a class="openServiceLinkcatg" href="bienfaits-conseiller-fiscal-sur-votre-entreprise.html"
+                style="font: 1em sans-serif;;  color: rgb(79, 111, 206); text-decoration: none;font-weight: bold;">Lire
+                la suite</a>
+            </span>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container" style="margin-top: 5%;padding:0 10%;">
+    <div class="row">
+      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 ">
+
+        <div class="card" style="padding-left:3%;padding-right:3%; padding-top: 2%;padding-bottom: 2%;">
+          <a href="Les-avantages-de-faire-affaire-avec-un-cabinet-comptable.html">
+            <img src="../img/fiducie-familiale.webp" class="card-img-top" style="height:200px">
+          </a>
+
+          <div class="texte card-body">
+            <!--  <a class="openServiceLinkcatg" href=""style="font: 1em sans-serif;;  color: rgb(79, 111, 206); text-decoration: none;font-weight: bold;"> Nettoyage de Bureaux</a> -->
+            <h4>
+              <a href="Les-avantages-de-faire-affaire-avec-un-cabinet-comptable.html"><u id="sttbl" style="    color: #50a2cb;
+                            font-size: 20px;
+                            font-weight: bold;">Les avantages de faire affaire avec un cabinet comptable</u></a>
+            </h4>
+            <p>
+            <p>in Conseils et astuces | 07/29/2016</br>
+              Our Score Les dirigeants de compagnie ont le choix entre effectuer en interne les tâches de comptabilité
+              ou faire appel à un cabinet comptable. Même si chaque position se défend, faire affaire avec un cabinet
+              comptable présente indéniablement de multiples avantages et contrairement aux idées reçues ne coûte pas
+              plus cher que de faire réaliser le travail en interne. Cette solution offre en outre l’avantage...
+            </p>
+            <span style="    display: flex;
+                    -webkit-box-pack: end;
+                    justify-content: flex-end;
+                    position: absolute;
+                    bottom: 10px;
+                    right: 10px;">
+
+              <a class="openServiceLinkcatg" href="Les-avantages-de-faire-affaire-avec-un-cabinet-comptable.html"
+                style="font: 1em sans-serif;;  color: rgb(79, 111, 206); text-decoration: none;font-weight: bold;">Lire
+                la suite</a>
+            </span>
+
+          </div>
+
+
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+        <div class="card" style="padding-left:3%;padding-right:3%; padding-top: 2%;padding-bottom: 2%;">
+
+
+
+          <a href="les-8-roles-essentiels-de-la-tenue-livres-comptables.html">
+            <img src="../img/etats-financiers-tc-comptables (1).webp" class="card-img-top" style="height:200px">
+          </a>
+
+          <div class="texte card-body">
+            <!-- <a class="openServiceLinkcatg" href=""style="font: 1em sans-serif;;  color: rgb(79, 111, 206); text-decoration: none;font-weight: bold;"> Nettoyage de Bureaux</a> -->
+            <h4>
+              <a href="les-8-roles-essentiels-de-la-tenue-livres-comptables.html"><u id="sttbl" style="    color: #50a2cb;
+                            font-size: 20px;
+                            font-weight: bold;">Les 8 rôles essentiels de la tenue de livres comptables</u></a>
+            </h4>
+            <p>
+            <p>in Tenue de livre comptable | 07/29/2016</br>
+              Our Score La tenue de livres comptables fait partie intégrante de l’exploitation de l’entreprise. Elle
+              permet de répondre à l’obligation légale de suivi des registres obligatoires, mais contribue également à
+              suivre les résultats, analyser les performances et piloter la compagnie. Que la tenue des livres
+              comptables soit effectuée par un comptable en interne ou un cabinet ...</p>
+            <span style="    display: flex;
+                    -webkit-box-pack: end;
+                    justify-content: flex-end;
+                    position: absolute;
+                    bottom: 10px;
+                    right: 10px;">
+
+              <a class="openServiceLinkcatg" href="les-8-roles-essentiels-de-la-tenue-livres-comptables.html"
+                style="font: 1em sans-serif;;  color: rgb(79, 111, 206); text-decoration: none;font-weight: bold;">Lire
+                la suite</a>
+            </span>
+
+          </div>
+        </div>
+
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-6 col-sx-12">
+
+        <div class="card" style="padding-left:3%;padding-right:3%; padding-top: 2%;padding-bottom: 2%;">
+          <a href="comment-trouver-un-cpa-adapte-a-ses-besoins.html">
+            <img src="../img/etats-financiers-tc-comptables (1).webp" class="card-img-top" style="height:200px">
+          </a>
+
+          <div class="texte card-body">
+            <!-- <a class="openServiceLinkcatg" href="" style="font: 1em sans-serif;;  color: rgb(79, 111, 206); text-decoration: none;font-weight: bold;"> Nettoyage de Bureaux</a> -->
+            <h4>
+              <a href="comment-trouver-un-cpa-adapte-a-ses-besoins.html"><u id="sttbl" style="    color: #50a2cb;
+                            font-size: 20px;
+                            font-weight: bold;">Comment trouver un CPA adapté à ses besoins ?</u></a>
+            </h4>
+            <p>
+            <p>in Conseils et astuces | 05/12/2016</br>
+              Our Score Trouver un cpa parfaitement adapté à nos besoins peut être laborieux. Vérifier que le CPA avec
+              lequel on envisage de collaborer est affilié à l’Ordre des comptables professionnels agréés du Casablanca
+              est une démarche nécessaire, mais ne garantit pas qu’il ait un profil adapté à ses besoins. Cette
+              affiliation atteste que son niveau académique est suffisant, que le cabinet est assuré en
+              responsabilité...</p>
+            <span style="    display: flex;
+                    -webkit-box-pack: end;
+                    justify-content: flex-end;
+                    position: absolute;
+                    bottom: 10px;
+                    right: 10px;">
+
+              <a class="openServiceLinkcatg" href="comment-trouver-un-cpa-adapte-a-ses-besoins.html"
+                style="font: 1em sans-serif;;  color: rgb(79, 111, 206); text-decoration: none;font-weight: bold;">Lire
+                la suite</a>
+            </span>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+  <div class="fixed-btn fixed-bottom btf1">
+    <a href="#"><img src="../img/phone.png" style="width: 50px;"></a>
+    <!--<a href="#">
+        
+        <i class="fa fa-envelope" aria-hidden="true"></i>
+    
+      </a>-->
+
+
+  </div>
+
+  <div class="fixed-btn fixed-bottom btf2 ">
+    <a href="#" style="display: block;"><img src="../img/gmail (1).png" style="width: 50px;"></a>
+    <!--<a href="#">
+        
+        <i class="fa fa-phone-square" aria-hidden="true"></i>
+    
+      </a>*/-->
+
+  </div>
+
+  <div class="fixed-btn fixed-bottom btf3 ">
+    <a href="#" style="display: block;"> <img src="../img/def.png" style="width: 50px;"></a>
+
+    <!-- <a href="#">
+        <i class="fa fa-whatsapp" aria-hidden="true"></i>
+        
+      </a>*/-->
+  </div>
+  <div class=" fixed-bottom " id="scrollUp">
+    <a href="#service" style="display: block;">
+      <img src="../img/up-arrow.png" alt="" style="width: 50px;">
+
+    </a>
+  </div>
+
+
+  <script>
+    jQuery(function () {
+      $(function () {
+        $(window).scroll(function () {
+          if ($(this).scrollTop() > 200)
+            $('#scrollUp').css('opacity', '1');
+          else
+            $('#scrollUp').css('opacity', '0');
+
+
+        });
+      });
+    });
+  </script>
+
+  <nav class="step-wizard pagination" style="margin-top: 2%;width: 100%">
+    <a href="bloc_page6.html"><button id="btnprecdbarmen1">&lt;&lt;</button></a>
+    <ul class="step-wizard-list pagination" id="autbarmn1">
+      <li class="step-wizard-item current-item page-item" style=" display: list-item;
+      text-align: -webkit-match-parent;">
+        <a onclick="fun1()" href="#"><span class="progress-count">
+            <p id="demo1" class="ps">31</p>
+          </span></a>
+      </li>
+      <li class="step-wizard-item current-item page-item" style=" display: list-item;
+      text-align: -webkit-match-parent;">
+        <a onclick="fun2()" href="#"><span class="progress-count">
+            <p id="demo2" class="ps">32</p>
+          </span></a>
+      </li>
+      <li class="step-wizard-item current-item page-item" style=" display: list-item;
+      text-align: -webkit-match-parent;">
+        <a onclick="fun3()" href="#"><span class="progress-count">
+            <p id="demo3" class="ps">33</p>
+          </span></a>
+      </li>
+      <li class="step-wizard-item current-item page-item" style=" display: list-item;
+      text-align: -webkit-match-parent;">
+        <a onclick="fun4()" href="#"><span class="progress-count">
+            <p id="demo4" class="ps">34</p>
+          </span></a>
+      </li>
+      <li class="step-wizard-item current-item page-item" style=" display: list-item;
+      text-align: -webkit-match-parent;">
+        <a onclick="fun5()" href="#"><span class="progress-count">
+            <p id="demo5" class="ps">35</p>
+          </span></a>
+      </li>
+
+
+
+    </ul>
+    <a href="bloc_page8.html"><button id="btnsuivantbrmen1">&gt;&gt;</button></a>
+  </nav>
+
+
+
+  <div class="container-fluid text-center " style="background-color:#1a2223 ; margin-top: 60px; color: #a6a6a6;">
+
+    <div class="container-fluid text-center " style="background-color:#1a2223 ; margin-top: 60px; color: #a6a6a6;">
+
+      <footer class=" text-center text-lg-start">
+
+        <div class="container p-4">
+
+          <div class="row mt-4">
+
+            <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+              <a class="navbar-brand" href="#"><img src="../img/logo-3.png" alt="" width="183"></a>
+
+              <p style="margin: 0;display: block;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;">Nous résolvons les problèmes commerciaux, adoptons une approche consultative pour
+                chaque engagement client et trouvons des solutions concrètes qui aideront votre organisation.</p>
+              <div class="  dispotion row ">
+                <div class="reseau_social ">
+                  <a href="https://www.twitter.com"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="16"
+                      fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                      <path
+                        d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
+                    </svg></a>
+                </div>
+                <div class="reseau_social">
+                  <a href="https://www.facebook.com"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                      fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                      <path
+                        d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                    </svg>
+                  </a>
+                </div>
+                <div class="reseau_social">
+                  <a href="https://www.Instagram.com"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                      fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                      <path
+                        d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+                    </svg>
+                  </a>
+                </div>
+                <div class="reseau_social">
+                  <a href="https://www.linkedin.com"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                      fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                      <path
+                        d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+                    </svg></a>
+                </div>
+
+              </div>
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-lg-4 col-md-6 mb-4 mb-md-0 decalagess ">
+              <h2 class=" mb-4 pb-1 baisse">Information</h2>
+
+              <ul id="menu-footer-menu-1" class="menu row ">
+                <div class="col col-xs-12 cop">
+
+                  <li id="menu-item-269" class="menu-item "><a href="">Services</a></li>
+                  <li id="menu-item-885" class="menu-item "><a href="">Marketing</a></li>
+                  <li id="menu-item-267" class="menu-item "><a href="">Études de cas</a></li>
+                  <li id="menu-item-886" class="menu-item  "><a href="">Consultante</a></li>
+                  <li id="menu-item-890" class="menu-item  "><a href="">FAQs</a></li>
+                  <li id="menu-item-887" class="menu-item "><a href="">Types d'entreprises</a></li>
+                </div>
+                <div class="col col-xs-12 cop">
+
+                  <li id="menu-item-889" class="menu-item "><a href="">Rechercher</a></li>
+                  <li id="menu-item-884" class="menu-item "><a href="">Clients</a></li>
+                  <li id="menu-item-883" class="menu-item "><a href="">Aide en ligne</a></li>
+                  <li id="menu-item-882" class="menu-item "><a href="">Conditions</a></li>
+                  <li id="menu-item-881" class="menu-item "><a href="">Informations principales</a></li>
+                  <li id="menu-item-268" class="menu-item "><a href="">Contacts</a></li>
+                </div>
+              </ul>
+
+
+            </div>
+
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+              <h2 class=" mb-4">Latest News</h2>
+
+              <div class="row">
+                <div class="col-3"><img src="../img/image-13-180x180.jpg" width="100%" height="100%"></div>
+                <div class="col-9">
+                  <h6>
+                    De quoi a besoin un processus de </br> rabotage ?
+                    </br> <strong>0 comments</strong>
+                  </h6>
+                </div>
+              </div>
+              <div class="row" style="margin-top:3%;">
+                <div class="col-3"> <img src="../img/image-13-180x180.jpg" width="100%" height="100%"> </div>
+                <div class="col-9">
+                  <h6>
+                    De quoi a besoin un processus de </br> rabotage ?
+                    </br><strong>0 comments</strong>
+                  </h6>
+                </div>
+              </div>
+            </div>
+            <!--Grid column-->
+            <div class="vc_empty_space  vc_custom_1513173856530 height_tiny container-fluid"
+              style="height: 1px; background-color: #363e3f;margin-top: 4rem;margin-bottom: 10px;"><span
+                class="vc_empty_space_inner"></span></div>
+          </div>
+          © 2021 Copyright All reserved</a>
+          <!--Grid row-->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+
+        <!--<div class=" p-3">
+  
+  </div>-->
+        <!-- Copyright -->
+      </footer>
+
+    </div>
+
+
+
+
+
+
+
+    <script>
+      /*
+            $(document).ready(function(){
+                $("#btnprecdbarmen1").hide();
+                $("#btnsuivantbrmen1").click(function(){
+                    $("#btnprecdbarmen1").show();
+            
+                        str1 = $( "#demo1" ).text();
+                        str2 = $( "#demo2" ).text();
+                        str3 = $( "#demo3" ).text();
+                        str4 = $( "#demo4" ).text();
+                        str5 = $( "#demo5" ).text();
+                        str6 = $( "#demo6" ).text();
+                        str7 = $( "#demo7" ).text();
+                        str8 = $( "#demo8" ).text();
+                        str9 = $( "#demo9" ).text();
+                        str10= $( "#demo10" ).text();
+                        sm1=parseInt(str1)+5;
+                        sm2=parseInt(str2)+5;
+                        sm3=parseInt(str3)+5;
+                        sm4=parseInt(str4)+5;
+                        sm5=parseInt(str5)+5;
+                        sm6=parseInt(str6)+5;
+                        sm7=parseInt(str7)+10;
+                        sm8=parseInt(str8)+10;
+                        sm9=parseInt(str9)+10;
+                        sm10=parseInt(str10)+10;
+                        $( "#demo1" ).text(sm1);
+                        $( "#demo2" ).text(sm2);
+                        $( "#demo3" ).text(sm3);
+                        $( "#demo4" ).text(sm4);
+                        $( "#demo5" ).text(sm5);
+                        $( "#demo6" ).text(sm6);
+                        $( "#demo7" ).text(sm7);
+                        $( "#demo8" ).text(sm8);
+                        $( "#demo9" ).text(sm9);
+                        $( "#demo10" ).text(sm10);
+                });
+            
+            
+                $("#btnprecdbarmen1").click(function(){
+                        str1 = $( "#demo1" ).text();
+                        str2 = $( "#demo2" ).text();
+                        str3 = $( "#demo3" ).text();
+                        str4 = $( "#demo4" ).text();
+                        str5 = $( "#demo5" ).text();
+                        str6 = $( "#demo6" ).text();
+                        str7 = $( "#demo7" ).text();
+                        str8 = $( "#demo8" ).text();
+                        str9 = $( "#demo9" ).text();
+                        str10 = $( "#demo10" ).text();
+                        if(parseInt(str1)<=2){
+                            $("#btnprecdbarmen1").hide();
+                        }
+                        if(parseInt(str1)>=2){            
+                        sm1=parseInt(str1)-10;
+                        sm2=parseInt(str2)-10;
+                        sm3=parseInt(str3)-10;
+                        sm4=parseInt(str4)-10;
+                        sm5=parseInt(str5)-10;
+                        sm6=parseInt(str6)-10;
+                        sm7=parseInt(str7)-10;
+                        sm8=parseInt(str8)-10;
+                        sm9=parseInt(str9)-10;
+                        sm10=parseInt(str10)-10;}
+                        $( "#demo1" ).text(sm1);
+                        $( "#demo2" ).text(sm2);
+                        $( "#demo3" ).text(sm3);
+                        $( "#demo4" ).text(sm4);
+                        $( "#demo5" ).text(sm5);
+                        $( "#demo6" ).text(sm6);
+                        $( "#demo7" ).text(sm7);
+                        $( "#demo8" ).text(sm8);
+                        $( "#demo9" ).text(sm9);
+                        $( "#demo10" ).text(sm10);
+                });
+            });
+            $("#contentArticle").load(window['a'+sm1]);
+            function fun1(){$("#contentArticle").load(window['a'+sm1]);}
+            function fun2(){$("#contentArticle").load(window['a'+sm2]);}
+            function fun3(){$("#contentArticle").load(window['a'+sm3]);}
+            function fun4(){$("#contentArticle").load(window['a'+sm4]);}
+            function fun5(){$("#contentArticle").load(window['a'+sm5]);}
+            function fun6(){$("#contentArticle").load(window['a'+sm6]);}
+            function fun7(){$("#contentArticle").load(window['a'+sm7]);}
+            function fun8(){$("#contentArticle").load(window['a'+sm8]);}
+            function fun9(){$("#contentArticle").load(window['a'+sm9]);}
+            function fun10(){$("#contentArticle").load(window['a'+sm10]);}
+            */
+    </script>
+    <script src="../JAVASCRIPT/nav_disign.js"></script>
+
+</body>
+
+</html>

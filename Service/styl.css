@@ -1,0 +1,283 @@
+body{font-family: "Roboto Slab",serif;
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.6em;
+  text-decoration: none;
+  text-transform: none;
+  letter-spacing: -0.45px;
+  
+  }
+ 
+  body{-webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  }
+ .reseau{
+  position: absolute;
+   display: flex;
+   justify-items: center;
+   align-items: center;
+   justify-content: space-evenly;
+   width: 200px;
+   
+   right: 0
+   
+ }
+ .reseau_social{
+ 
+ 
+   width: 40px;
+   height: 40px;
+   display: flex;
+   text-align: center;
+   align-items: center;
+   justify-content: center;
+   background-color: whitesmoke;
+   border-radius: 50%;
+ } 
+ 
+ .reseau_social a{
+  display: block;
+  
+  color:#164294 !important
+}
+
+
+
+.reseau_social:hover{
+
+
+  
+  background-color:#16437E;
+  
+  
+  
+}
+.reseau_social:hover a svg{
+  color: white;
+
+}
+
+   .fixed-btn a i{
+    font-size: 3rem;
+    
+  
+  }
+  #scrollUp a i{
+    font-size: 3rem;
+  
+  }
+  #scrollUp{
+    display: block;
+     opacity: 0;
+     
+  }
+  
+  .btf1{
+    position: relative;
+    margin-left:94%;
+    top:70%;
+  
+  } 
+  .btf2{
+    position: relative;
+    margin-left:94%; 
+    top: 80%;
+  }
+  .btf3{
+    position: relative;
+    margin-left:94%;
+    top: 90%;}
+  
+
+
+.carousel-caption{
+    bottom: 200px;
+}
+
+.button-18:hover,.button-18:focus{
+    background-color: blue;
+    color: white;
+}
+.pos_left{
+    text-align: left;
+}
+.carousel-inner{ height:370px;}
+
+
+.bordure{
+  background-color: whitesmoke;
+  border-radius: 40px;
+}
+.bordure:hover{
+  background-color: white;
+}
+.taille{
+    height: 60px;
+}
+.rown1{
+    
+
+    padding: 0 auto;
+    margin: 0 10px;
+    
+}
+.rown2{
+    
+
+    padding: 0 auto;
+    margin: 0 10px;
+    
+}
+.rown3{
+    
+
+    padding: 0 auto;
+    margin: 0 10px;
+    
+}
+.rown4{
+    
+
+    padding: 0 auto;
+    margin: 0 10px;
+    
+}
+.titre{
+        
+    text-align: left;
+
+
+}
+
+
+
+.dropdown:hover>.dropdown-menu{
+    display: block;
+
+}
+
+
+
+
+.cop a{
+  text-decoration: none;
+  color: #a6a6a6;
+  
+
+ }
+ .dispotion{
+  position: absolute;
+   display: flex;
+   justify-items: center;
+   align-items: center;
+   justify-content: space-evenly;
+   width: 200px;
+   
+   right: 0
+   
+ }
+ .dispotion .reseau_social{
+  background-color: #363e3f;
+ 
+}
+.dispotion .reseau_social svg{
+  color: white;
+}
+.dispotion .reseau_social:hover{
+  background-color: white;
+}
+.dispotion .reseau_social:hover  svg{
+  color:#363e3f;
+}
+.dispotion{
+  right: 0;
+  margin-top: 3%;
+  float: right;
+  
+  right: 79%;
+}
+
+.container1{margin-top: 5%;}
+
+
+
+@media screen and (max-width: 962px) {
+  .dispotion{
+    margin-top: 27%;
+    right: 38%;
+    
+  }
+}
+
+
+@media screen and (max-width: 767px) {
+   
+ 
+.centre_texter{
+  text-align: center;
+}
+.carousel-inner{ height:200px;}
+
+
+  .img_conteneur{
+
+    padding-top:10px ;
+  }
+  #menu-footer-menu-1{
+  
+  
+    list-style: none;
+    }
+    .reseau{
+      opacity: 0;
+    }
+    
+    .cop {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      text-align: center;
+    
+  
+      
+    }
+    .baisse{
+      position: relative;
+      padding-top: 1%;
+      margin-top: 2%;
+    
+      
+    }
+    .btf1{
+    
+      margin-left:85%;
+
+    
+    } 
+    .btf2{
+      
+      margin-left:85%; 
+  
+    }
+    .btf3{
+      position: relative;
+      margin-left:85%;
+      }
+    
+
+    .dispotion{
+     
+      
+      right: 29%;
+      margin-top: -1%;
+    }
+  
+    
+
+  }
+
+
+
+
+
